@@ -1,4 +1,6 @@
-package s.logger;
+package info.nohoho.logger;
+
+import info.nohoho.logger.annotation.*;
 
 import java.io.File;
 import java.net.URI;
@@ -10,7 +12,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 
-import s.logger.annotation.*;
 
 import javassist.ClassPool;
 import javassist.CtClass;

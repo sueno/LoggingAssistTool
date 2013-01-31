@@ -1,4 +1,4 @@
-package s.logger;
+package info.nohoho.logger;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

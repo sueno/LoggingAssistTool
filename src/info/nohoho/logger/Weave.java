@@ -1,4 +1,6 @@
-package s.logger;
+package info.nohoho.logger;
+
+import info.nohoho.logger.annotation.TargetClass;
 
 import java.io.IOException;
 import java.lang.instrument.ClassDefinition;
@@ -6,7 +8,6 @@ import java.lang.instrument.Instrumentation;
 import java.lang.reflect.Method;
 import java.util.List;
 
-import s.logger.annotation.TargetClass;
 
 import javassist.CannotCompileException;
 import javassist.ClassPool;

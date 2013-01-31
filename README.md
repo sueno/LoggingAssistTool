@@ -1,8 +1,6 @@
 
 ロギングライブラリ
 ---
-他プロジェクトの副産物
-
 既存のクラスにロギング処理を追加する．
 
 ロギング処理を追加するクラスのソースコードを変更する必要がないのが特徴．(本来の処理とロギング処理の完全な分離)
@@ -16,9 +14,9 @@ logger.jarにパスを通せば使える(ハズ．動作確認はしていません)
 
 1. 新しいクラスを作る
 
-2. s.logger.StateLoggerを継承(いらないかも)
+2. info.nohoho.logger.StateLoggerを継承(いらないかも)
 
-3. ロギング大将クラスをs.logger.annotation.TargetClassアノテーションの引数に指定
+3. ロギング大将クラスをinfo.nohoho.logger.annotation.TargetClassアノテーションの引数に指定
 
 4. ロギング対象クラスと同じメソッドを定義
 
@@ -26,13 +24,13 @@ logger.jarにパスを通せば使える(ハズ．動作確認はしていません)
 
 6. 作ったクラスをコンパイルし，クラスパスに追加
 
-7. ```Weave.weave();```をプログラム実行の始めに行うように処理を追加
+7. ```info.nohoho.logger.Weave.weave();```をプログラム実行の始めに行うように処理を追加
 
 
 例) BankクラスのdoOpen(String name, String passwd)にログをとる処理を追加
 ```
-import logger.annotation.TargetClass;
-import logger.StateLogger;
+import info.nohoho.logger.annotation.TargetClass;
+import info.nohoho.logger.StateLogger;
 
 //ターゲットクラスはBank
 @TargetClass("Bank")
